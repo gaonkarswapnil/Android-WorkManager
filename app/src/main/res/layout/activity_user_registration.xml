@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".workmanagernetworkapi.UserRegistrationActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBegin40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40px" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40px" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBegin100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100px" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="100px" />
+
+
+
+    <TextView
+        android:id="@+id/tvRegisterScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="User"
+        android:textSize="135px"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/etRegisterScreenFirstName"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40px"
+        android:drawablePadding="15dp"
+        android:hint="First Name"
+        android:padding="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterScreenTitle" />
+
+    <EditText
+        android:id="@+id/etRegisterScreenLastName"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40px"
+        android:drawablePadding="15dp"
+        android:hint="Last Name"
+        android:textStyle="bold"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenFirstName" />
+
+
+    <EditText
+        android:id="@+id/etRegisterScreenEmail"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40px"
+        android:drawablePadding="15dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenLastName" />
+
+    <EditText
+        android:id="@+id/etRegisterScreenPassword"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40px"
+        android:drawablePadding="15dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenEmail" />
+
+    <EditText
+        android:id="@+id/etRegisterScreenConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40px"
+        android:drawablePadding="15dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenPassword" />
+
+    <LinearLayout
+        android:id="@+id/llRegisterGender"
+        android:layout_width="0dp"
+        android:layout_height="70px"
+        android:orientation="horizontal"
+        android:layout_marginTop="69px"
+        android:weightSum="2"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenConfirmPassword">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <RadioGroup
+            android:id="@+id/rbRegisterGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbRegisterScreenMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbRegisterScreenFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="20sp"
+                android:layout_marginStart="30dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etRegisterScreenPhone"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="69px"
+        android:drawablePadding="15dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/llRegisterGender" />
+
+
+    <Button
+        android:id="@+id/btnRegisterScreenButton"
+        android:layout_width="0dp"
+        android:layout_height="162px"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="78px"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterScreenPhone" />
+
+
+
+    <Button
+        android:id="@+id/btnSync"
+        android:layout_width="0dp"
+        android:layout_height="162px"
+        android:text="Sync"
+        android:textStyle="bold"
+        android:textSize="78px"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd100"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glBegin100"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegisterScreenButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
