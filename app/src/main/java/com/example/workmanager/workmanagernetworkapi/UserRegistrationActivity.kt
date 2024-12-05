@@ -1,5 +1,6 @@
 package com.example.workmanager.workmanagernetworkapi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -64,15 +65,9 @@ class UserRegistrationActivity : AppCompatActivity() {
         }
 
         binding.btnSync.setOnClickListener {
-            val constraints = Constraints.Builder()
-                .setRequiredNetworkType(NetworkType.CONNECTED)
-                .build()
-
-            val workRequest = OneTimeWorkRequest.Builder(MyUserWorker::class.java)
-                .setConstraints(constraints)
-                .build()
-
-            WorkManager.getInstance(this).enqueue(workRequest)
+            Intent(this, ViewUserDataActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
     }
