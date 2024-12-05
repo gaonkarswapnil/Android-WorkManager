@@ -50,6 +50,8 @@ class MyUserWorker(context: Context, workerParameters: WorkerParameters): Worker
                     Log.d("MyUserWorker", "${list.body()}")
                     user.flag = true
                     database.userDao().updateUser(user)
+
+                    Log.d("MyUserWorker", "${list.body()}")
                     flag = true
                 }
             }
